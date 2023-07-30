@@ -1,0 +1,107 @@
+<div class="appointment-container">
+ 
+  <!-- Profession Selection -->
+  <div *ngIf="!selectedProfession" style="margin-top: 2%;">
+    <h2> Select your resource</h2>
+    <div class="profession-selection">
+      <div class="profession-card" *ngFor="let profession of professions" (click)="selectProfession(profession)">
+        <img [src]="profession.imageUrl" alt="{{ profession.resourceName }}" />
+        <p>{{ profession.resourceName }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Form -->
+  <div *ngIf="selectedProfession" style="margin-top: 50px">
+    <div class="appointment-form">
+      <h2>Appointment Booking</h2>
+
+
+      
+      <div class="form-group">
+        <label for="acquaintance">Select Acquaintance:</label>
+        <select [(ngModel)]="appointment.acquaintanceName" class="form-control" required name="acquaintance">
+          <option value="" disabled selected>Choose an acquaintance</option>
+          <option *ngFor="let acquaintance of acquaintanceDetails" [value]="acquaintance.name">{{ acquaintance.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="userName">Username:</label>
+        <input type="text" class="form-control" id="userName" required name="userName"
+               [(ngModel)]="appointment.username" 
+               [ngModelOptions]="{ updateOn: 'blur' }"
+               (ngModelChange)="validateUserName()">
+      </div>
+      
+
+      <div class="form-group">
+        <label for="profession">Selected Profession:</label>
+        <input type="text" class="form-control" id="profession" readonly
+         [(ngModel)]="appointment.resourceName">
+      </div>
+      
+      <div class="form-group">
+        <!-- Use selectedResourceId for ngModel binding -->
+        <input type="hidden" [(ngModel)]="selectedResourceId" name="resourceId">
+      </div>
+
+      <div class="form-group">
+        <label for="selectedDate">Select Appointment Date:</label>
+        <div class="appointment-date">
+          <input
+          type="date"
+          class="form-control"
+          id="exampleInputExchangeRate"
+          [(ngModel)]="appointment.createdAt"
+          placeholder="10/12/2002"
+        />
+        </div>
+      </div>
+
+      
+      <div class="form-group ">
+        
+          
+            <label for="startTime">Select Start Time:</label>
+          
+          <div class="time-picker">
+            <select [(ngModel)]="appointment.startTime"  class="form-control"
+             required name="startTime" (ngModelChange)="validateStartTime()">
+              <option value="" disabled selected>Choose a start time</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="2:00 PM">1:00 PM</option>
+              <option value="3:00 PM">2:00 PM</option>
+              <!-- Add other time options as needed -->
+            </select>
+          </div>
+          
+    
+            <label for="endTime">Select End Time:</label>
+          <div class="time-picker">
+            <select [(ngModel)]="appointment.endTime" required name="endTime"  class="form-control"
+             (ngModelChange)="validateEndTime()">
+              <option value="" disabled selected>Choose an end time</option>
+              <option value="10:00 AM">11:00 AM</option>
+              <option value="11:00 AM">12:00 AM</option>
+              <option value="12:00 PM">1:00 PM</option>
+              <option value="2:00 PM">2:00 PM</option>
+              <option value="3:00 PM">3:00 PM</option>
+              <!-- Add other time options as needed -->
+            </select>
+          </div>
+          
+      </div>
+      
+      
+      <!-- Add other appointment form fields as needed -->
+
+      <div class="btn-container" style="display: flex;">
+        <button type="button" class="btn" style="margin-right: 20px;" (click)="register()">Book Appointment</button>
+        <button type="button" class="btn btn-secondary" (click)="cancelAppointment()">Cancel</button>
+      </div>
+    </div>
+  </div>
+

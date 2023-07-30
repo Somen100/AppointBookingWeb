@@ -1,0 +1,26 @@
+<div class="container-fluid g-0">
+    <!-- Use an ng-container to wrap the header and main content -->
+    <ng-container>
+      <app-header (sideNavToggled)="sideNavStatus = $event;"  *ngIf="isUserAuthenticated()"></app-header>
+      <main>
+        <!-- Wrap the side navigation and main display area in a div with a class 'content-container' -->
+        <div class="content-container">
+          <!-- MAIN DISPLAY AREA -->
+          <div class="display-area p-2 m-1" [ngClass]="{'display-area-shrink':sideNavStatus}">
+            <!-- <p class="fs-1 fw-bold fst-italic">MAIN DISPLAY AREA</p> -->
+            <router-outlet></router-outlet>
+          </div>
+  
+          <app-sidenav [sideNavStatus]="sideNavStatus" class="fw-bold" 
+          [ngClass]="{'app-side-nav-open':sideNavStatus}" style="  background:linear-gradient(rgb(4, 4, 143),rgb(6, 2, 66),rgb(95, 129, 243)); /* Dark color background */
+          box-shadow: 0 0 20px rgba(0, 0, 10, 0.6); /* Add shadow for a glossy effect */
+          color: #fff; /* Text color for a shiny look */"
+           *ngIf="isUserAuthenticated()"></app-sidenav>
+        </div>
+      </main>
+    </ng-container>
+  
+    <!-- Show the login component if not authenticated -->
+    <app-login *ngIf="!isAuthenticated"></app-login>
+  </div>
+  

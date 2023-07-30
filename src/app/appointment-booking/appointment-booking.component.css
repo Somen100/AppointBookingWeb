@@ -1,0 +1,313 @@
+
+/* CSS for the appointment container */
+.appointment-container {
+  max-width: 70%; /* Reduce the container width to 70% of the available screen width */
+  margin: 0 auto; /* Center the container horizontally on the screen */
+  margin-top: 2%; /* Add some top margin for spacing */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Apply styles for profession cards and appointment form inside the appointment container */
+/* ... */
+
+/* Additional styles for buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #ccc;
+}
+/* Add margin between buttons */
+.btn-container {
+  display: flex; /* Use flexbox to align buttons horizontally */
+  justify-content: space-between; /* Add space between buttons */
+}
+
+.btn {
+  margin-right: 40px; /* Add margin to the right of the first button */
+}
+
+.btn:hover {
+  background-color: #564dff;
+}
+.btn{           
+  margin: 40px;
+}
+/* Add other styles for the page as needed */
+/* ... */
+.btn-container {
+  display: flex;
+  justify-content: space-between; /* This will add equal space between the buttons */
+  align-items: center;
+  margin-top: 20px; /* Add some top margin for spacing */
+  margin-right: 20px; /* Add some top margin for spacing */
+
+}
+/* Rest of the existing CSS styles for profession cards and appointment form go here */
+/* ... */
+
+.profession-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profession-card {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Add a box-shadow for a glossy effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profession-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.profession-card p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Add the scale and glow effect on hovering */
+.profession-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+label{
+  margin-bottom: 5px;
+}
+/* Styling for the appointment booking form */
+.appointment-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  /* Add a slight box-shadow for a glossy effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Add a box-shadow for a glossy effect on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #ccc;
+}
+
+.btn:hover {
+  background-color: #564dff;
+}
+
+/* Styling for the appointment date picker */
+.appointment-date {
+  width: 100%;
+}
+
+/* Set the background color of the appointment date input */
+.mat-form-field-appearance-outline.mat-form-field-can-float .mat-form-field-outline {
+  color: #fff;
+  stroke: #6c63ff;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float .mat-form-field-outline-thickness {
+  border-color: #6c63ff;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #6c63ff;
+}
+
+/* Set the background color of the date picker popup */
+.mat-calendar {
+  background-color: #333;
+}
+
+.mat-calendar-body-cell-content {
+  color: #fff;
+}
+
+/* Set the background color of the selected date in the calendar */
+.mat-calendar-body-active .mat-calendar-body-cell-content {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+/* Set the background color of the datepicker toggle icon */
+.mat-datepicker-toggle .mat-icon-button {
+  background-color: #6c63ff;
+}
+
+/* Set the color of the datepicker toggle icon */
+.mat-datepicker-toggle .mat-icon-button .mat-button-wrapper {
+  color: #fff;
+}
+
+/* Styling for the time picker dropdown */
+.mat-select {
+  width: 100%;
+  color: #6c63ff;
+  background-color: #fff;
+  border: 1px solid #6c63ff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Styling for the time picker dropdown options */
+.mat-option {
+  color: #6c63ff;
+}
+
+/* Center the touch-target icon vertically */
+.mat-datepicker-toggle .mat-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add hover effect to the date and time picker toggle buttons */
+.mat-datepicker-toggle:hover,
+.mat-datepicker-toggle.mat-button-toggle-checked,
+.mat-datepicker-toggle.mat-button-toggle-checked:hover {
+  background-color: #007bff;
+}
+
+/* Styling for the username input control */
+#userName {
+  /* Add some padding for a polished look */
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* Styling for the success toast message */
+.success-toast {
+  background-color: #4caf50;
+  color: #fff;
+  margin-top: 80px;
+  /* Add a slight box-shadow for a glossy effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Center the h2 text */
+h2 {
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Add any other custom styles for the controls as needed */
+.time-picker-col {
+  width: 30%;
+}
+.time-picker-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-control-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; /* Adjust this value to add spacing between controls */
+  /* Set the width of the parent container */
+  width: 70%; /* Adjust the width as needed */
+}
+
+.time-picker-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+@media (max-width: 576px) {
+  #userName {
+    width: 100%;
+  }
+}
+
+/* Horizontally align start time and end time */
+.time-picker-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Adjust the width of start time and end time columns */
+.time-picker-col {
+  width: 30%;
+}
+

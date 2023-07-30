@@ -1,0 +1,79 @@
+.black-border {
+    border: 1px solid black !important;
+  }
+  
+  app-header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 4rem;
+    /* z-index is 2, becasue if any other content comes, tehen this header
+     element msut be om top of that */
+    z-index: 2;
+  }
+  
+  main {
+    position: absolute;
+    width: 100%;
+    top: 3.5rem;
+    z-index: 1;
+  }
+  
+  app-sidenav {
+    position: fixed; /* Change from absolute to fixed */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0;
+    width: 50px;
+    height: 100vh;
+    background-color: rgba(34, 34, 34, 1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgb(255, 255, 255);
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 250ms ease-in;
+  }
+  
+  .app-side-nav-open{
+    width: 250px;
+  }
+  .display-area{
+    position: absolute;
+    margin-top: 0%;
+    left: 50px;
+    width: calc(100% - 50px);
+    height: 100%;
+    transition:left 250ms ease-in, width 250ms ease-in;
+  
+  }
+  .display-area-shrink{
+    width: calc(100% - 250px);
+    left: 250px;
+  }
+  @media (max-width: 576px) {
+    app-sidenav {
+      width: 0;
+      border: none;
+    }
+  
+    .content-container {
+      flex-direction: column;
+    }
+  
+    .display-area {
+      width: 100%;
+      left: 0;
+      margin-top:200px
+    }
+  
+    .app-side-nav-open {
+      width: 100%;
+    }
+  
+    .display-area-shrink {
+      width: calc(100% - 10px); /* Adjust the width to account for sidenav */
+      left: 250px; /* Adjust the left position to match the sidenav width */
+      height: calc(100% - 4rem);
+    }
+  }
+
+  

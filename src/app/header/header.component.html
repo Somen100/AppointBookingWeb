@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark px-2" style=" background:linear-gradient(rgb(4, 4, 143),rgb(6, 2, 66),rgb(95, 129, 243)
+); ">
+    <!-- TOGGLE BUTTON -->
+    <div class="side-nav-button p-2 me-3 text-light" (click)="SideNavToggled()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  
+    <!--RIGHT OF TOGGLE BUTTON (ON HEADER) MENUS -->
+    <a class="navbar-brand px-4" href="#">Appointment Booking</a>
+  
+    <!-- Add the Bootstrap 'navbar-toggler' button to trigger the responsive menu -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Wrap the menu items in a 'div' with the 'collapse' and 'navbar-collapse' classes -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto">
+        <!-- Your menu items go here -->
+      </ul>
+    </div>
+  
+    <!-- SEARCH BUTTON -->
+    <form class="d-flex me-5">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  
+    <!-- PROFILE BUTTON -->
+    <div class="profule-logo dropstart">
+      <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+        {{this.firstName}}
+      </button>
+  
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a href="#" class="dropdown-item">Sign Up</a></li>
+        <li><a href="#" class="dropdown-item">Log In</a></li>
+        <li><a href="#" class="dropdown-item">Your Profile</a></li>
+        <li><a href="#" class="dropdown-item">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+  

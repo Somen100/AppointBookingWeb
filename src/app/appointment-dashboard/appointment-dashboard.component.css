@@ -1,0 +1,292 @@
+/* Custom dashboard styling */
+.appointment-dashboard {
+  padding: 20px;
+  background-color: #f5f5f5; /* Light gray background */
+  border-radius: 10px; /* Rounded corners for a professional look */
+  box-shadow: 0px 0px 10px rgba(125, 43, 233, 0.1); /* Soft shadow for depth */
+
+  /* Add animation */
+  animation-name: fadeIn; /* Name of the animation */
+  animation-duration: 1s; /* Duration of the animation */
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 (completely transparent) */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 (fully visible) */
+  }
+}
+
+/* Style the table container */
+.table-container {
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Style the table caption */
+.table-caption {
+  color: #333; /* Dark gray text color */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Add styles for Angular Material table */
+.mat-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding: 10px;
+  text-align: center;
+}
+
+.mat-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mat-row:hover {
+  background-color: rgba(0, 0, 0, 0.04); /* Light gray background on hover */
+}
+
+/* Styling for edit and delete buttons */
+.mat-icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mat-icon-button:hover {
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.edit-button {
+  color: #007bff; /* Primary color for the edit button */
+}
+
+.delete-button {
+  color: #f8f0f1; /* Color for the delete button */
+}
+
+/* Add glossy effect to buttons */
+.edit-button,
+.delete-button {
+  background-color: #e13cf0; /* Purple */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delete-button {
+  background-color: #ec0505; /* Red */
+}
+
+.edit-button:hover {
+  background-color: #5a0256; /* Darker purple on hover */
+}
+
+.delete-button:hover {
+  background-color: #640606; /* Darker red on hover */
+}
+
+/* Add animation effect to buttons */
+.edit-button,
+.delete-button {
+  animation: scaleUp 0.2s ease-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2); /* Scale up by 20% */
+  }
+}
+
+  
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #ffffff; /* White background */
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* Add a border */
+  }
+  
+  .table-caption {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .table thead th {
+    font-weight: 600;
+    font-size: larger;
+    background-color: #f0f0f0; /* Light gray background for header */
+    border: 1px solid #ccc; /* Add borders to header cells */
+  }
+  
+  .table tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Light gray background for odd rows */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f0f0f0; /* Slightly darker gray background on hover */
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #ccc; /* Add borders to cells */
+  }
+  
+  @media (max-width: 576px) {
+    .table {
+      font-size: 14px;
+    }
+  }
+  
+  
+
+  
+  @media (max-width: 576px) {
+    .table {
+      font-size: 14px;
+    }
+  }
+  
+  
+  /* Add glossy effect to buttons */
+
+.edit-button {
+    background-color: #e13cf0; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.delete-button {
+  background-color: #ec0505; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.edit-button:hover {
+    background-color: #5a0256; /* Darker green */
+  }
+.delete-button:hover {
+  background-color: #640606; /* Darker green */
+}
+
+/* Add animation effect to buttons */
+.edit-button,
+.delete-button {
+  animation: scaleUp 0.2s ease-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.appointment-dashboard {
+  padding: 20px;
+  background:linear-gradient(white,rgb(21, 21, 56),white);
+}
+
+.table-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.table-caption {
+  color: #333;
+}
+
+/* Add styles for Angular Material table */
+.mat-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding: 10px;
+  text-align: center;
+}
+
+.mat-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mat-row:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Styling for edit and delete buttons */
+.mat-icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mat-icon-button:hover {
+  transform: scale(1.1);
+}
+
+.edit-button {
+  color: #007bff; /* Primary color */
+}
+
+.delete-button {
+  color: #f8f0f1; /* Delete color */
+}
+

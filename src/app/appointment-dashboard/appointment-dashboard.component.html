@@ -1,0 +1,52 @@
+<div class="appointment-dashboard">
+    <div class="row">
+      <div class="col-sm-12 table-container">
+  
+        <h2 class="table-caption">Appointment Dashboard</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr role="row">
+              <th scope="col">Appointment ID</th>
+              <th scope="col">UserName</th>
+              <th scope="col">ClientName</th>
+              <th scope="col">Profession</th>
+              <th scope="col"> Resource Name</th>
+              <th scope="col">Start Time</th>
+              <th scope="col">End Time</th>
+              <th scope="col"> Created Date</th>
+              <th scope="col"> Action </th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Replace the following example rows with your actual data using *ngFor -->
+            <tr *ngFor="let a of appointmentList">
+                <td>{{ a.appointmentId }}</td>
+                <td>{{ a.username }}</td>
+                <td>{{ a.clientName }}</td>
+                <td>{{ a.resourceName }}</td>
+                <td>{{a.acquaintanceName}}</td>
+                <td>{{ a.startTime }}</td>
+                <td>{{ a.endTime  }}</td>
+                <td>{{ a.createdAt  }}</td>
+                <td>
+                    <!-- Edit button -->
+                    <button mat-icon-button color="primary" class="edit-button" (click)="openEditPopup(a)">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+            
+                    <!-- Delete button -->
+                    <button mat-icon-button color="warn" class="delete-button" (click)="deleteAppointment(a.appointmentId)">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </td>
+              </tr>
+            
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+  
+      </div>
+    </div>
+  </div>
+  

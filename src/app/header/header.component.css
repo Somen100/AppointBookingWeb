@@ -1,0 +1,47 @@
+
+
+.side-nav-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.side-nav-button:hover{
+   background:linear-gradient(rgb(97, 97, 194),rgb(4, 48, 168));
+border-radius: 30%;
+}
+.navbar{
+
+}
+/* Add media query for smaller screens (adjust the max-width as needed) */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .navbar-collapse {
+      display: none;
+    }
+  
+    .navbar-toggler {
+      display: flex;
+    }
+  
+    /* Adjust the height of the header when collapsed */
+    .navbar.collapsed {
+      height: 70px;
+    }
+  
+    /* Style the main content area to avoid overlap with the header */
+    main {
+      margin-top: 70px; /* Adjust this value based on your header height */
+    }
+  
+    /* Show the collapsed navbar when toggler is active */
+    .navbar-toggler.collapsed + .navbar-collapse {
+      display: flex;
+    }
+  }

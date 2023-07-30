@@ -1,0 +1,221 @@
+/* login-register.component.css */
+.login-register-container {
+  max-width: 900px; /* Increase the max-width to make it bigger */
+  margin: 0 auto;
+  width: 800px;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1{
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  width: 50%;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+}
+
+.login-register-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.login-register-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.login-register-tabs button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.login-register-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for login and register forms */
+.login-form-group, .register-form-group {
+  margin-bottom: 20px;
+}
+
+.login-form-group label, .register-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form-group input, .register-form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form-group input:focus, .register-form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.login-register-form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-register-form-button:hover {
+  background-color: #0056b3;
+}
+/* Add styles for the company name */
+.company-name {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  box-shadow: #172d46;
+  color: #cedef0;
+  margin-top: 20px;
+}
+
+/* Make the form container responsive */
+
+
+
+/* Add decorative elements to the screen */
+body {
+  background-color: #f9f9f9;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+
+
+
+.page-wrapper::after {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #007bff, #00a8ff);
+  opacity: 0.1;
+}
+
+/* ... (existing styles) ... */
+
+/* Styles for the page wrapper */
+.page-wrapper {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #172d46, #00a8ff);
+
+  animation: fadeIn 1s;
+}
+/* Styles for decorative elements */
+
+
+.page-wrapper::after {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #172d46, #00a8ff);
+  opacity: 0.1;
+}
+
+/* Additional decorative styles */
+/* login-register.component.css */
+.page-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f1f1f1; /* Change the background color to a lighter shade */
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* Add box-shadow for glowing effect */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1), 0 0 80px rgba(0, 0, 0, 0.1);
+}
+
+/* Add CSS gradient for a more professional background */
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #007bff, #00bfff); /* Customize the gradient colors as desired */
+  opacity: 0.2;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/* Styles for the success toast */
+.success-toast {
+  background-color: green; /* Change the background color for success toast */
+  color: white; /* Change the text color for success toast */
+}
+
+/* Styles for the error toast */
+.error-toast {
+  background-color: red; /* Change the background color for error toast */
+  color: white; /* Change the text color for error toast */
+}
+
+/* Styles for the company name */
+.company-name {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #c6cfd8;
+  /* Add glossy effect */
+  background: linear-gradient(135deg, #d3d3d3, #f9f9f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Add subtle box shadow to give a glossy appearance */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0px;
+}
+
+/* Make the form container responsive */
+@media (max-width: 576px) {
+  .login-register-container {
+    width: 90%;
+    margin-top: 20px;
+  }
+}
+.login-register-container{
+  width: 500px;
+}
